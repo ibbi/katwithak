@@ -2,18 +2,47 @@
 <html lang="en">
  <head>
     <meta charset="utf-8">
-    <title>CSS3 Ruled Paper Effect</title>
+    <title>kat</title>
     <link href="styles.css" rel="stylesheet" rev="stylesheet" />
  </head>
  <body>
+  <div class="container wideDiv">
 
-   <h1>CSS3 Ruled Paper Effect</h1>
+    <img src="a.jpg" alt="Smiley face" height="60%">
+    <img src="b.jpg" alt="Smiley face" height="40%">
+    <img src="c.jpg" alt="Smiley face" height="50%">
+    <img src="d.jpg" alt="Smiley face" height="55%">
+    <img src="e.jpg" alt="Smiley face" height="70%"><img src="a.jpg" alt="Smiley face" height="60%">
+    <img src="b.jpg" alt="Smiley face" height="40%">
+    <img src="c.jpg" alt="Smiley face" height="50%">
+    <img src="d.jpg" alt="Smiley face" height="55%">
+    <img src="e.jpg" alt="Smiley face" height="70%"><img src="a.jpg" alt="Smiley face" height="60%">
+    <img src="b.jpg" alt="Smiley face" height="40%">
+    <img src="c.jpg" alt="Smiley face" height="50%">
+    <img src="d.jpg" alt="Smiley face" height="55%">
+    <img src="e.jpg" alt="Smiley face" height="70%">
 
-      <section class="paper">
-      	<article class="head"></article>
-        <p>&nbsp;</p>
-        <article contenteditable="true">Start typing your content editable content here!</article>
-      </section>
+  </div>
 
  </body>
+ <script>
+ 	(function() {
+  function scrollHorizontally(e) {
+    e = window.event || e;
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    document.documentElement.scrollLeft -= (delta * 40); // Multiplied by 40
+    document.body.scrollLeft -= (delta * 40); // Multiplied by 40
+    e.preventDefault();
+  }
+  if (window.addEventListener) {
+    // IE9, Chrome, Safari, Opera
+    window.addEventListener("mousewheel", scrollHorizontally, false);
+    // Firefox
+    window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+  } else {
+    // IE 6/7/8
+    window.attachEvent("onmousewheel", scrollHorizontally);
+  }
+})();
+</script>
 </html>
