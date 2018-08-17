@@ -10,6 +10,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" rev="stylesheet" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
   </head>
   <body>
   	<div class="containerb">
@@ -58,12 +60,28 @@
         c40.238,88.449,68.993,190.7,49.853,289.211c-9.129,46.981-20.9,94.993-32.856,141.342c-7.486,29.021-21.176,53.734-31.518,81.433
         c-9.207,24.645-12.56,50.123-17.314,76.016"/>
       </svg>
-<p class="poem">
-  i like big butts and i cannot lie
+<p id="currPoem" class="poem">
 </p>
 </div>
-<script>
+  <script type='text/javascript'>
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1YTbsiR39GwLadp4IkF45-k6KJX9B8YfnsdFWpfPM3OE/edit?usp=sharing';
+  /*init tabletop with the google sheet url*/
+  function init() {
+    Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1YTbsiR39GwLadp4IkF45-k6KJX9B8YfnsdFWpfPM3OE/edit?usp=sharing',
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
 
+  function showInfo(data, tabletop) {
+    var poemSet = [];
+    /*for loop appends to a string using data[], which is then assigned to the table mentioned above */
+    for (var k =0; k< data.length; k++){
+      console.log(data[k]);
+      }
+    document.getElementById("currPoem").innerHTML = poemSet[1];
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
 </script>
 
 </body>
