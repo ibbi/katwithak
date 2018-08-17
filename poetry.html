@@ -64,7 +64,6 @@
 </p>
 </div>
   <script type='text/javascript'>
-  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1YTbsiR39GwLadp4IkF45-k6KJX9B8YfnsdFWpfPM3OE/edit?usp=sharing';
   /*init tabletop with the google sheet url*/
   function init() {
     Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1YTbsiR39GwLadp4IkF45-k6KJX9B8YfnsdFWpfPM3OE/edit?usp=sharing',
@@ -73,12 +72,9 @@
   }
 
   function showInfo(data, tabletop) {
-    var poemSet = [];
+    // var poemSet = [];
     /*for loop appends to a string using data[], which is then assigned to the table mentioned above */
-    for (var k =0; k< data.length; k++){
-      console.log(data[k]);
-      }
-    document.getElementById("currPoem").innerHTML = poemSet[1];
+    document.getElementById("currPoem").innerHTML = data[2]['oof'];
   }
 
   window.addEventListener('DOMContentLoaded', init)
