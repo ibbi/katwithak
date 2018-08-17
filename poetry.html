@@ -78,6 +78,10 @@
   }
 
   window.addEventListener('DOMContentLoaded', init)
+  let svgpath = document.querySelector("path");
+svgpath.addEventListener("animationend", function(event) {
+  console.log('done');
+}, false);
 </script>
 
 </body>

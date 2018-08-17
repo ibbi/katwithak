@@ -49,9 +49,9 @@ img {
   justify-content: center; 
 }
 .path {
-  stroke-dasharray: 13664.5;
-  stroke-dashoffset: 13664.5;
-  animation: dash 2s linear forwards;
+  stroke-dasharray: 13672.7;
+  stroke-dashoffset: 13672.7;
+  animation: dash 1s linear forwards;
 }
 
 @keyframes dash {
