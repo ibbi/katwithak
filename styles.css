@@ -51,22 +51,22 @@ img {
 .patha {
   stroke-dasharray: 13672.7;
   stroke-dashoffset: -13672.7;
-  animation: dashZero 1s linear forwards;
+  animation: dashZero 3s linear forwards;
 }
 .pathb {
   stroke-dasharray: 13672.7;
   stroke-dashoffset: 0;
-  animation: dashDrawn 1s linear forwards;
+  animation: dashDrawn 3s linear forwards;
 }
 .pathc {
   stroke-dasharray: 13672.7;
   stroke-dashoffset: 13672.7;
-  animation: dashZero 1s linear forwards;
+  animation: dashZero 3s linear forwards;
 }
 .pathd {
   stroke-dasharray: 13672.7;
   stroke-dashoffset: 0;
-  animation: dashUndrawn 1s linear forwards;
+  animation: dashUndrawn 3s linear forwards;
 }
 
 

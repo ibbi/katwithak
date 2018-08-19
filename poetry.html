@@ -78,15 +78,19 @@
 
     
   }
-
+//patha ear to temple draw
+//pathd temple to ear undraw
+//pathc temple to ear draw
+//pathb ear to temple undraw
   window.addEventListener('DOMContentLoaded', init)
 const svgpath = document.getElementById("path");
-const paths = ['patha', 'pathb', 'pathc', 'pathd'];
+const paths = ['patha', 'pathd', 'patha', 'pathd'];
 let i = 0;
 svgpath.addEventListener("animationend", () => {
   svgpath.classList.remove(paths[i]);
   i = (i + 1) % 4;
   svgpath.classList.add(paths[i]);
+  console.log(paths[i]);
   document.getElementById("currPoem").innerHTML = poemSet[Math.floor(Math.random() * (poemSet.length))]['oof'];
 
 }, false);
