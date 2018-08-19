@@ -18,7 +18,7 @@
       <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="150px" height="200px" viewBox="0 0 3027.621 4035.496" enable-background="new 0 0 150 200"
          xml:space="preserve">
-      <path class="path" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" d="M413.078,1768.305
+      <path id="path" class="patha" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" d="M413.078,1768.305
         c-24.633,50.051-0.718,112.339,6.712,163.942c9.629,66.869,23.438,133.097,36.056,199.496
         c22.431,118.04,30.003,240.334,26.476,359.948c-3.251,110.267,14.797,239.577,71.273,335.987
         c14.709,25.109,29.367,50.25,43.714,75.568c9.666,19.331,28.359,31.145,41,48c14.109,20.522,29.366,40.521,48,57.186
@@ -64,6 +64,7 @@
 </p>
 </div>
   <script type='text/javascript'>
+  var poemSet = [];
   /*init tabletop with the google sheet url*/
   function init() {
     Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1YTbsiR39GwLadp4IkF45-k6KJX9B8YfnsdFWpfPM3OE/edit?usp=sharing',
@@ -72,16 +73,21 @@
   }
 
   function showInfo(data, tabletop) {
-    // var poemSet = [];
-    /*for loop appends to a string using data[], which is then assigned to the table mentioned above */
-    document.getElementById("currPoem").innerHTML = data[2]['oof'];
-  }
+    poemSet = data;
 
+
+    document.getElementById("currPoem").innerHTML = poemSet[Math.floor(Math.random() * (poemSet.length))]['oof'];
+  }
+  i=0;
   window.addEventListener('DOMContentLoaded', init)
-  let svgpath = document.querySelector("path");
+  let svgpath = document.getElementById("path");
 svgpath.addEventListener("animationend", function(event) {
-  console.log('done');
+  document.getElementById("path").classList.add('pathb');
+  document.getElementById("path").classList.remove('patha');
+  i++;
+  console.log(i);
 }, false);
+// document.getElementById("currPoem").innerHTML = poemSet[3];
 </script>
 
 </body>

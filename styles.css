@@ -48,15 +48,41 @@ img {
   flex-direction: column;
   justify-content: center; 
 }
-.path {
+.patha {
+  stroke-dasharray: 13672.7;
+  stroke-dashoffset: -13672.7;
+  animation: dashZero 1s linear forwards;
+}
+.pathb {
+  stroke-dasharray: 13672.7;
+  stroke-dashoffset: 0;
+  animation: dashDrawn 1s linear forwards;
+}
+.pathc {
   stroke-dasharray: 13672.7;
   stroke-dashoffset: 13672.7;
-  animation: dash 1s linear forwards;
+  animation: dashZero 1s linear forwards;
+}
+.pathd {
+  stroke-dasharray: 13672.7;
+  stroke-dashoffset: 0;
+  animation: dashUndrawn 1s linear forwards;
 }
 
-@keyframes dash {
+
+@keyframes dashZero {
   to {
     stroke-dashoffset: 0;
+  }
+}
+@keyframes dashDrawn {
+  to {
+    stroke-dashoffset: 13672.7;
+  }
+}
+@keyframes dashUndrawn {
+  to {
+    stroke-dashoffset: -13672.7;
   }
 }
 .work {
