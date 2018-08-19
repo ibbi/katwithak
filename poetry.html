@@ -76,16 +76,19 @@
     poemSet = data;
 
 
-    document.getElementById("currPoem").innerHTML = poemSet[Math.floor(Math.random() * (poemSet.length))]['oof'];
+    
   }
-  i=0;
+
   window.addEventListener('DOMContentLoaded', init)
-  let svgpath = document.getElementById("path");
-svgpath.addEventListener("animationend", function(event) {
-  document.getElementById("path").classList.add('pathb');
-  document.getElementById("path").classList.remove('patha');
-  i++;
-  console.log(i);
+const svgpath = document.getElementById("path");
+const paths = ['patha', 'pathb', 'pathc', 'pathd'];
+let i = 0;
+svgpath.addEventListener("animationend", () => {
+  svgpath.classList.remove(paths[i]);
+  i = (i + 1) % 4;
+  svgpath.classList.add(paths[i]);
+  document.getElementById("currPoem").innerHTML = poemSet[Math.floor(Math.random() * (poemSet.length))]['oof'];
+
 }, false);
 // document.getElementById("currPoem").innerHTML = poemSet[3];
 </script>
