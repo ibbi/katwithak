@@ -24,14 +24,16 @@ p {
   font-size: 150%;
   align-self: center;
 }
-#wrapper .text {
-position:relative;
-bottom:30px;
-left:0px;
-visibility:hidden;
+.painting .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  visibility:hidden;
 }
 
-#wrapper:hover .text {
+.painting:hover .text {
 visibility:visible;
 }
 img {
@@ -57,6 +59,7 @@ img {
   height: 100%;
   flex-direction: column;
   justify-content: center; 
+  position: relative;
 }
 .patha {
   stroke-dasharray: 13672.7;
