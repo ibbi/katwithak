@@ -12,6 +12,7 @@ body {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center; 
+        display: flex;
 }
 p {
   font-size: medium;
@@ -27,9 +28,10 @@ p {
 .painting .text {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 44%;
   transform: translate(-50%, -50%);
-  font-weight: bold;
+  font-size: 140%;
+  color: white;
   visibility:hidden;
 }
 
