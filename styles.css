@@ -50,7 +50,12 @@ img {
 }
 .container{
   display:flex;
-  flex-direction: column;
+/*  flex-direction: column;
+*/}
+@media (max-width: 450px){
+  .container{
+    flex-direction: column;
+  }
 }
 .wideDiv {
   height: 100vh;
